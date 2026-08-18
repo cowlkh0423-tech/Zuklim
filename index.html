@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CODE : 죽림고수</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         게임 전체
+    ====================================================== -->
+
+    <div id="game">
+
+
+        <!-- =================================================
+             Canvas
+        ================================================== -->
+
+        <canvas id="gameCanvas"></canvas>
+
+
+        <!-- =================================================
+             HUD
+        ================================================== -->
+
+        <div id="hud">
+
+            <div class="hud-box">
+
+                <span class="hud-label">
+                    LIFE
+                </span>
+
+                <span id="life">
+                    ♥
+                </span>
+
+            </div>
+
+
+            <div class="hud-box">
+
+                <span class="hud-label">
+                    SURVIVAL
+                </span>
+
+                <span id="time">
+                    00.00
+                </span>
+
+            </div>
+
+
+            <div class="hud-box">
+
+                <span class="hud-label">
+                    BEST
+                </span>
+
+                <span id="best">
+                    00.00
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             시작 화면
+        ================================================== -->
+
+        <div
+            id="startScreen"
+            class="screen"
+        >
+
+            <div class="subtitle">
+                BAMBOO SURVIVAL
+            </div>
+
+
+            <h1>
+                CODE
+            </h1>
+
+
+            <h2>
+                죽림고수
+            </h2>
+
+
+            <p>
+                쏟아지는 화살을 피해<br>
+                최대한 오래 살아남아라.
+            </p>
+
+
+            <div class="controls">
+
+                ↑ ↓ ← →
+
+                <small>
+                    방향키로 이동
+                </small>
+
+            </div>
+
+
+            <button id="startButton">
+                GAME START
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             게임 오버 화면
+        ================================================== -->
+
+        <div
+            id="gameOverScreen"
+            class="screen hidden"
+        >
+
+            <div class="subtitle">
+                SURVIVAL ENDED
+            </div>
+
+
+            <h2>
+                GAME OVER
+            </h2>
+
+
+            <div class="result">
+
+                <div>
+
+                    <span>
+                        TIME
+                    </span>
+
+                    <strong id="finalTime">
+                        00.00
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        BEST
+                    </span>
+
+                    <strong id="finalBest">
+                        00.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button id="restartButton">
+                RESTART
+            </button>
+
+
+            <small>
+                R 키를 눌러 다시 시작
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JavaScript
+         
+         중요:
+         type="module" 필수
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="./js/main.js"
+    ></script>
+
+</body>
+
+</html>
